@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<style>
+ul {
+    list-style-type: none;
+    left-margin: 40;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="home.html">Home</a></li>
+  <li><a class="active" href="flight_bookings.html">Book Flights</a></li>
+  <li><a href="review.html">Flight Details</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+<div>
+  <h2>Passenger Details and Preferences</h2>
+  <form class="formholder" action="CRUD" method = "post">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname"> <br> <br>
+
+	<label for="email">Email ID</label>
+    <input type="email" id="emailid" name="emailid"> <br> <br>
+        
+	<input type="radio" name="trip_type" id="id1" value="one-way" onclick="myFunction()"> One-way
+	<input type="radio" name="trip_type" id="id2" value="return" onclick="myFunc()">Return<br> <br>
+	<label for="no_of_bookings">No.of Bookings</label>
+    <select id="bookings" name="bookings">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+	</select><br>
+	<input type="date" name="ddate"  placeholder="">
+  	<!-- Arrival Date :  -->
+    <input type="date" name="adate" id="myDate" placeholder=""><br /><br /> <br>
+	<label for="country">From</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="india">India</option>
+	  <option value="uk">UK</option>
+	  <option value="usa">USA</option>
+	  <option value="china">China</option>
+	  <option value="japan">Japan</option>
+	  <option value="new zealand">New Zealand</option>
+	  <option value="bangladesh">Bangladesh</option>
+	  <option value="africa">Africa</option>
+	  <option value="ireland">Ireland</option>
+    </select>
+    
+    <label for="airportName"></label>
+    <select id="airportName" name="airportName">
+    <option value="Albany,NY">Albany,NY</option>
+    <option value="IAD">IAD</option>
+    </select>
+	<br>
+	<br>
+	
+	<label for="country">To</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="india">India</option>
+	  <option value="uk">UK</option>
+	  <option value="usa">USA</option>
+	  <option value="china">China</option>
+	  <option value="japan">Japan</option>
+	  <option value="new zealand">New Zealand</option>
+	  <option value="bangladesh">Bangladesh</option>
+	  <option value="africa">Africa</option>
+	  <option value="ireland">Ireland</option>
+    </select>
+  	
+  	 <label for="destairportName"></label>
+    <select id="destairportName" name="destairportName">
+    <option value="Albany,NY">Albany,NY</option>
+    <option value="LHR">LHR</option>
+    </select>
+  	 <br>
+  	 <br>
+  	 <label for="travel class">Travel Class</label>
+  	 <select name="class"  style="width: 300px;">
+  <option value="Economy">Economy</option>
+  <option value="Premium Economy">Premium Economy</option>
+  <option value="Business/Club">Business/Club</option>
+  <option value="First">First</option>
+	</select><br><br>
+	<label for="ticket type">Ticket Type</label>
+	<select name="Ticket Type" style="width: 300px;">
+  <option value="Lowest Price">Lowest Price</option>
+  <option value="Feasible">Feasible</option>
+  	</select><br><br>
+  	  <!-- <input type="submit" value="Submit"> -->
+    <input type="submit" align = " center" value="Search Flights" >
+     <script>
+function myFunction() {
+	 document.getElementById("myDate").disabled = true;
+	}
+function myFunc() {
+	 document.getElementById("myDate").disabled = false;
+	}
+</script>
+  </form>
+</div>
+ </body>
+</html>
